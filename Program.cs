@@ -80,3 +80,54 @@ if (n >= 0)
     }
 }
 */
+
+// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+/*
+Console.Clear();
+Console.Write("Enter number: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int n1 = n%10;
+int n3 = n/100;
+Console.Write($"{(n - 100 * n3 - n1)/10}");
+*/
+
+// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+
+/*
+Console.Clear();
+Console.Write("Enter number: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int i = 1;
+int n1 = -1;
+int n2 = -1;
+int n3 = -1;
+if (n < 0) {
+    n = -n;
+}
+while (n / i*10 > 1) {
+n3 = n2;
+n2 = n1;
+n1 = n/i;
+i = i*10;
+}
+if (n3 == -1) {
+Console.Write("There is no third numder");
+}
+else
+Console.Write($"Third number is {n3%10}");
+*/
+
+// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+/*
+Console.Clear();
+Console.Write("Enter number: ");
+int n = Convert.ToInt32(Console.ReadLine());
+if (n == 6 || n == 7)
+{
+Console.Write("Weekend");
+} else
+{
+Console.Write("Workday");
+}
+*/
