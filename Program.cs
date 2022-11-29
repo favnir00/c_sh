@@ -131,3 +131,54 @@ Console.Write("Weekend");
 Console.Write("Workday");
 }
 */
+
+//Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+/*
+Console.Clear();
+Console.Write("Enter number: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int n1 = n/10000;
+int n2 = (n - n1*10000)/1000;
+int n3 = (n - n1*10000 - n2*1000)/100;
+int n4 = (n - n1*10000 - n2*1000 - n3*100)/10;
+int n5 = n%10;
+
+if (n1 == n5 && n2 == n4)
+{
+Console.WriteLine("Yes");
+} else
+{
+Console.WriteLine("No");
+}
+*/
+
+//Задача 21: Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+/*
+Console.Clear();
+Console.Write("Enter XA coordinate: ");
+int xa = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter XB coordinate: ");
+int xb = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter YA coordinate: ");
+int ya = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter YB coordinate: ");
+int yb = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter ZA coordinate: ");
+int za = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter ZB coordinate: ");
+int zb = Convert.ToInt32(Console.ReadLine());
+double l = Math.Sqrt((xa-xb)*(xa-xb) + (ya-yb)*(ya-yb) + (za-zb)*(za-zb));
+Console.Write($"Length {l}");
+*/
+
+//Задача 23: Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+/*
+Console.Clear();
+Console.Write("Enter number: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int i = 1;
+while (n >= i) {
+Console.Write($"{i*i*i}, ");
+i++;
+}
+*/
