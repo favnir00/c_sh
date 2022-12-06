@@ -182,3 +182,40 @@ Console.Write($"{i*i*i}, ");
 i++;
 }
 */
+
+//Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+/*
+Console.Clear();
+Console.Write("Enter first number: ");
+int n1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter second number: ");
+int n2 = Convert.ToInt32(Console.ReadLine());
+int pow = 1;
+for (int i = 1; i <= n2; i++)
+   pow = pow * n1;
+Console.Write($"n1 pow n2 = {pow}");
+*/
+
+//Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+/*
+Console.Clear();
+Console.Write("Enter number: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
+while (n >= 1) {
+sum = sum + n%10;
+n = n/10;
+}
+Console.Write($"Summ = {sum}");
+*/
+
+//Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+/*
+Console.Clear();
+int[] array = new int[8];
+for (int i = 0; i < array.Length; i++) {
+  Console.Write($"Enter {i} number of array: ");
+  array[i]= Convert.ToInt32(Console.ReadLine());
+}
+Console.WriteLine(string.Join(", ", array));
+*/
