@@ -219,3 +219,74 @@ for (int i = 0; i < array.Length; i++) {
 }
 Console.WriteLine(string.Join(", ", array));
 */
+
+//Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+/*
+Console.Clear();
+Console.Write("Enter lenth of array: ");
+int l = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[l];
+for (int i = 0; i < array.Length; i++)
+  array[i]= new Random().Next(100, 1000);
+Console.WriteLine(string.Join(", ", array));
+CountEvenArray(array);
+
+void CountEvenArray(int[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++){
+        if (array[i]%2 == 0) {
+        count++;
+        }
+    }
+    Console.WriteLine($"Quantity = {count}");
+}
+*/
+
+//Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+/*
+Console.Clear();
+Console.Write("Enter lenth of array: ");
+int l = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[l];
+for (int i = 0; i < array.Length; i++)
+  array[i]= new Random().Next(1, 100);
+Console.WriteLine(string.Join(", ", array));
+SumOddPosArray(array);
+
+void SumOddPosArray(int[] array)
+{
+    int sum = 0;
+    for (int i = 1; i < array.Length; i=i+2){
+        sum = sum + array[i];
+    }
+    Console.WriteLine($"Sum = {sum}");
+}
+*/
+
+//Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+/*
+Console.Clear();
+Console.Write("Enter lenth of array: ");
+int l = Convert.ToInt32(Console.ReadLine());
+double[] array = new double[l];
+for (int i = 0; i < array.Length; i++)
+  array[i]= new Random().NextDouble()*(50-10)+10;
+Console.WriteLine(string.Join(", ", array));
+DiffMinMaxArray(array);
+
+void DiffMinMaxArray(double[] array)
+{
+    double min = array[0];
+    double max = array[0];
+    double diff = 0;
+    for (int i = 0; i < array.Length; i++){
+        if (array[i] > max)
+          max = array[i];
+        if (array[i] < min)
+          min = array[i];
+        diff = max - min;
+    }
+    Console.WriteLine($"Difference = {diff}");
+}
+*/
