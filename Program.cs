@@ -290,3 +290,39 @@ void DiffMinMaxArray(double[] array)
     Console.WriteLine($"Difference = {diff}");
 }
 */
+
+//Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+/*
+Console.Clear();
+Console.Write("Enter quantity of numbers: ");
+int l = Convert.ToInt32(Console.ReadLine());
+int count = 0;
+int n = 0;
+for (int i = 1; i < l + 1; i++) {
+  Console.WriteLine($"Enter {i} number: ");
+  n = Convert.ToInt32(Console.ReadLine());
+  if (n > 0 ) count += 1;
+}
+Console.WriteLine($"Quantity of positive numbers is {count}");
+*/
+
+//Задача 43. Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+/*
+Console.Clear();
+Console.Write("Enter k1: ");
+int k1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter b1: ");
+int b1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter k2: ");
+int k2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter b2: ");
+int b2 = Convert.ToInt32(Console.ReadLine());
+LineCross(k1, b1, k2, b2);
+
+void LineCross(int fk1, int fb1, int fk2, int fb2)
+{
+    int x = (fb2 - fb1)/(fk1 - fk2);
+    int y = fk1*x + fb1;
+    Console.WriteLine($"Intersection point is {x}, {y}");
+}
+*/
