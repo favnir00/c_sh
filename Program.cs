@@ -326,3 +326,98 @@ void LineCross(int fk1, int fb1, int fk2, int fb2)
     Console.WriteLine($"Intersection point is {x}, {y}");
 }
 */
+
+//Задача 47: Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+/*
+void InputMatrix(double[, ] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = new Random().NextDouble();
+            Console.Write($"{matrix[i, j]} \t");
+        }
+        Console.WriteLine();
+    }
+}
+
+Console.Clear();
+Console.Write("Input m and n: ");
+string[] coord = Console.ReadLine().Split(" ");
+int row = int.Parse(coord[0]);
+int column = int.Parse(coord[1]);
+double[,] matrix = new double[row, column];
+InputMatrix(matrix);
+*/
+
+//Задача 50: Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+/*
+void randomMatrix(int[, ] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = new Random().Next(-10, 10);
+            Console.Write($"{matrix[i, j]} \t");
+        }
+        Console.WriteLine();
+    }
+}
+
+void findElement(int m, int n, int[, ] matrix)
+{
+    if (m>matrix.GetLength(0) || n>matrix.GetLength(1))
+    {
+      Console.Write("No such element");
+    }
+    else
+      Console.Write($"Your element is: {matrix[m-1, n-1]}");
+}
+
+Console.Clear();
+Console.Write("Input position of element: ");
+string[] coord = Console.ReadLine().Split(" ");
+int rowPosition = int.Parse(coord[0]);
+int columnPosition = int.Parse(coord[1]);
+int[,] matrix = new int[5, 5];
+randomMatrix(matrix);
+findElement(rowPosition, columnPosition, matrix);
+*/
+
+//Задача 52: Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+/*
+void randomMatrix(int[, ] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = new Random().Next(-10, 10);
+        }
+    }
+}
+
+void findMean(int[, ] matrix)
+{
+    double mean = 0;
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        mean = 0;
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            mean = mean + matrix[i, j];
+            Console.Write($"{matrix[i, j]} \t");
+        }
+        Console.WriteLine($"\t {i+1} row mean is: {mean/matrix.GetLength(1)}");
+    }
+}
+
+Console.Clear();
+Console.Write("Input matrix size: ");
+int[] coord = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+int[,] matrix = new int[coord[0], coord[1]];
+randomMatrix(matrix);
+findMean(matrix);
+*/
