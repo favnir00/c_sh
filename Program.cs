@@ -395,22 +395,24 @@ void randomMatrix(int[, ] matrix)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             matrix[i, j] = new Random().Next(-10, 10);
+            Console.Write($"{matrix[i, j]} \t");
         }
+        Console.WriteLine();
     }
+    Console.WriteLine();
 }
 
 void findMean(int[, ] matrix)
 {
     double mean = 0;
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(1); i++)
     {
         mean = 0;
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(0); j++)
         {
-            mean = mean + matrix[i, j];
-            Console.Write($"{matrix[i, j]} \t");
+            mean = mean + matrix[j, i];
         }
-        Console.WriteLine($"\t {i+1} row mean is: {mean/matrix.GetLength(1)}");
+        Console.WriteLine($"{i+1} column mean is: {mean/matrix.GetLength(0)}");
     }
 }
 
