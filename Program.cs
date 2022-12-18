@@ -423,3 +423,223 @@ int[,] matrix = new int[coord[0], coord[1]];
 randomMatrix(matrix);
 findMean(matrix);
 */
+
+//Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
+/*
+void InputMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = new Random().Next(1, 11); // [1, 10]
+            Console.Write($"{matrix[i, j]} \t");
+        }
+        Console.WriteLine();
+    }
+}
+
+void DescendEachRow(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        int[] temp = new int[matrix.GetLength(1)];
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            temp[j] = matrix[i, j];
+        }
+        Array.Sort(temp);
+        Array.Reverse(temp);
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = temp[j];
+        }
+    }
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+            Console.Write($"{matrix[i, j]} \t");
+        Console.WriteLine();
+    }
+}
+
+Console.Clear();
+Console.Write("Input matrix size: ");
+int[] coord = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+int[,] matrix = new int[coord[0], coord[1]];
+InputMatrix(matrix);
+Console.WriteLine("\n\n");
+DescendEachRow(matrix);
+*/
+
+//Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+/*
+void InputMatrix(int[,] matrix, int rndMax)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = new Random().Next(1, rndMax); // [1, 10]
+            Console.Write($"{matrix[i, j]} \t");
+        }
+        Console.WriteLine();
+    }
+}
+
+void SumEachRow(int[,] matrix, int rndMax)
+{
+    int sum = 0;
+    int min = matrix.GetLength(0) * rndMax;
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        sum = 0;
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            sum = sum + matrix[i, j];
+        }
+        if (sum < min)
+        {
+            min = sum;
+        }
+    }
+    Console.WriteLine(min);
+}
+
+Console.Clear();
+Console.Write("Input matrix size: ");
+int[] coord = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+int[,] matrix = new int[coord[0], coord[1]];
+int rndMax = 10;
+InputMatrix(matrix, rndMax);
+SumEachRow(matrix, rndMax);
+*/
+
+//Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+/*
+void InputMatrix(int[,] matrix, int rndMax)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = new Random().Next(1, rndMax); // [1, 10]
+            Console.Write($"{matrix[i, j]} \t");
+        }
+        Console.WriteLine();
+    }
+}
+
+void MatrixMultiplacation(int[,] matrix1, int[,] matrix2)
+{
+    int[,] matrix3 = new int[matrix1.GetLength(0), matrix1.GetLength(1)];
+    for (int i = 0; i < matrix1.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix1.GetLength(1); j++)
+        {
+            for (int k = 0; k < matrix1.GetLength(1); k++)
+            {
+                matrix3[i, j] = matrix3[i, j] + matrix1[i, k]*matrix2[k, j];
+            }
+        }
+    }
+    for (int i = 0; i < matrix3.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix3.GetLength(1); j++)
+        {
+            Console.Write($"{matrix3[i, j]} \t");
+        }
+        Console.WriteLine();
+    }
+}
+
+Console.Clear();
+Console.Write("Input matrix size: ");
+int[] coord = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+int[,] matrix1 = new int[coord[0], coord[1]];
+int[,] matrix2 = new int[coord[0], coord[1]];
+int rndMax = 10;
+InputMatrix(matrix1, rndMax);
+Console.WriteLine("\n");
+InputMatrix(matrix2, rndMax);
+Console.WriteLine("\n");
+MatrixMultiplacation(matrix1, matrix2);
+*/
+
+//Задача 60: Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+/*
+void InputMatrix(int[, ,] matrix)
+{
+    int element = 10;
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            for (int k = 0; k < matrix.GetLength(2); k++)
+            {
+                matrix[i, j, k] = element++;
+                Console.WriteLine($"{matrix[i, j, k]} ({i}, {j}, {k})");
+            }
+        }
+    }
+}
+
+Console.Clear();
+Console.Write("Input matrix size: ");
+int[] coord = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+int[, ,] matrix = new int[coord[0], coord[1], coord[2]];
+InputMatrix(matrix);
+*/
+
+//Задача 62: Заполните спирально массив.
+/*
+void PrintMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($"{matrix[i, j]} \t");
+        }
+        Console.WriteLine();
+    }
+}
+
+void SpiralMatrix(int[, ] matrix, int si, int element)
+{
+    for (int i = 0 + si; i < matrix.GetLength(1) - si; i++)
+    {
+        matrix[0 + si, i] = element++;
+    }
+    for (int i = 1 + si; i < matrix.GetLength(0) - si; i++)
+    {
+        matrix[i, matrix.GetLength(1) - 1  - si] = element++;
+    }
+    for (int i = matrix.GetLength(1) - 2 - si; i >= 0 + si; i--)
+    {
+        matrix[matrix.GetLength(0) - 1 - si, i] = element++;
+    }
+    for (int i = matrix.GetLength(0) - 2 - si; i > 0 + si; i--)
+    {
+        matrix[i, 0 + si] = element++;
+    }
+    si++;
+    if (si <= matrix.GetLength(0)/2)
+    {
+        SpiralMatrix(matrix, si, element);
+    }
+}
+
+Console.Clear();
+Console.Write("Input matrix size: ");
+int[] coord = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+int[,] matrix = new int[coord[0], coord[1]];
+int si = 0; // spiral iteration
+int element = 11; // start element
+if (coord[0] == coord[1]) {
+SpiralMatrix(matrix, si, element);
+PrintMatrix(matrix);
+} else {
+Console.Write("Matrix not square, try again");
+}
+*/
