@@ -643,3 +643,45 @@ PrintMatrix(matrix);
 Console.Write("Matrix not square, try again");
 }
 */
+
+//Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+/*
+void sum(int m, int n, int s)
+{
+    s = s + m;
+    if (m < n) {
+        sum(m + 1, n, s);
+    }
+    else
+    {
+        Console.Write($"{s}");
+    }
+}
+
+Console.Clear();
+Console.Write("Input M and N: ");
+int[] mn = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+int s = 0;
+sum(mn[0], mn[1], s);
+*/
+
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n
+/*
+int A(int m, int n)
+{
+    if (m == 0) {
+        return n + 1;
+    }
+    else if (n == 0) {
+        return A(m - 1, 1);
+    }
+    else {
+        return A(m - 1, A(m, n - 1));
+    }
+}
+
+Console.Clear();
+Console.Write("Input M and N: ");
+int[] mn = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+Console.Write($"{A (mn[0], mn[1])}");
+*/
